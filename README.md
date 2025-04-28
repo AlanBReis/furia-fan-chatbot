@@ -16,7 +16,7 @@ O diagrama abaixo representa como o sistema é organizado:
 - Back-end: Flask (Python)
 - Banco de Dados: PostgreSQL
 - IA Gratuita: Hugging Face API (chatbot) 
-- Hospedagem: Vercel (Frontend) + Render ou Railway (Backend)
+- Hospedagem: Vercel (Frontend) + Railway (Backend)
 
 ## 🎯 Funcionalidades
 
