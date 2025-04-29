@@ -1,8 +1,12 @@
 from flask import Flask, request, jsonify
+from services.chatbot_service import ask_chatbot
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+load_dotenv()  # Carrega variáveis do .env
 
 app = Flask(__name__)
-CORS(app)  # Permitir que o React acesse a API
+CORS(app)
 
 @app.route('/', methods=['GET'])
 def home():
@@ -11,10 +15,9 @@ def home():
 @app.route('/chat', methods=['POST'])
 def chat():
     user_message = request.json.get('message')
-    
-    # Aqui depois vamos conectar o Hugging Face ou outro modelo
-    response = f"Você disse: {user_message}"  # Resposta simulada (mock)
-
+    response = ask_chatbot(user_message)
+    if "Erro ao se comunicar com o chatbot:" in response or "Tempo de resposta excedido." in response or "Desculpe, não entendi a resposta do modelo." in response:
+        return jsonify({'error': response}), 500  # Retorne um código de erro 500
     return jsonify({'response': response})
 
 if __name__ == '__main__':

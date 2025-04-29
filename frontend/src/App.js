@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import Chatbot from './components/chatbot';
+import AdCarousel from './components/AdCarousel';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      
+      <div className="chatbot">
+        <h1>Chat FÚRIA</h1>
+        <Chatbot />
+      </div>
+
+
+
+      <div className="ads">
+        <h1>Nossa Loja</h1>
+        <AdCarousel />
+        
+
+      </div>
+
     </div>
   );
 }
