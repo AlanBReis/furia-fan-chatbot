@@ -7,8 +7,6 @@ Este sistema permite que fãs da FURIA interajam em tempo real, usando um chatbo
 O diagrama abaixo representa como o sistema é organizado:
 ![Diagrama do Projeto](images/image.png)
 
-## 📹 Demonstração
-👉 [Inserir Link do Vídeo de Apresentação]
 
 ## 📚 Tecnologias Usadas
 
